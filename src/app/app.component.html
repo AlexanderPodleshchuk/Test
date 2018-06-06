@@ -1,20 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+ <header id="head-menu">
   <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+    {{ title }}
+   </h1>
+   <change-title></change-title>
+</header>
+<section>
+ <article>
+      <header>
+          <h2>Билет номер [[[номер билета]]]</h2>
+      </header>
+      <input type="button" name="test" value="GuEST">
+      <p>Are you proud of being Belarusian?</p>
+      <p>I am Belarusian because my parents who gave me life and brought me up are Belarusian. And what if I were born in a different country on a different continent? In my opinion, a sense of pride in your country, a sense of belonging to a particular nation develops in a person with time. Therefore at my age, by the way I am 18, I can say quite positively, that I am proud to live in Belarus.</p>
+      <p>The real treasure of Belarus is its wonderful nature. The country has hundreds of wild forests, rolling hills, green valleys, sweet­scented meadows and golden fields. Beloveshzkaya Pushcha is the only place where you can meet mighty European bison in the wild. Belarus is also famous for its clear lakes and ribbon­like rivers, that’s why it’s called a blue­eyed one. The resorts of lakes Naroch and Braslav are open all year round and let tourists experience the unforgettable peaceful atmosphere.</p>
+      <p>I am proud of the rich heroic history of my country and its people. Although for many centuries we were part of the Grand Duchy of Lithuania, the Polish­Lithuanian Commonwelth and then the Russian Empire, we have managed to stay united and haven’t lost our uniqueness. Many foreigners admit that our people are extremely sociable, hospitable, and generous and we are welcoming with visitors. We are also described as resourceful and peaceful. When socializing, Belarusians are open, warm­hearted, fun­loving, humorous and outgoing in spite of all the difficulties they face in their life.</p>
+      <p>Of course I’m proud of our national holidays and traditions, especially those which are deep­rooted and typical of our nation such as Kalyady, Maslenitsa, Dazhynki. They are unique and make us stand out. Besides, they are of particular interest for tourists because they reflect our culture.</p>
+      <p>In conclusion, I’d like to say that I’m proud of my country and its people. Each time I go abroad I tell foreigners about our great past and achievements. Each time I leave the country I want to come back again, because I miss it. If I could draw I would start drawing pictures with its beautiful landscapes; if I could write I would write lyric poems about it. Belarus is the place my heart will always belong to!</p>
+  </article>
+  <div class="row">
+      <div *ngFor="let posr of posts" class="col s12 m6">
+        <div class="card-contenet white-text">
+            <div class="card-titel">
+                <p>{{ post.name }}</p>
+                <p>{{ post.tiket }}</p>
+            </div>
+        </div>
+      </div>
 
+  </div>
+
+</section>
+<footer>
+
+</footer>
