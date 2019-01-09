@@ -1,0 +1,18 @@
+<div *ngFor = "let text of toShow" >
+  <h2 >NUMBER OF TICKET {{ text.id }} </h2>
+  <p id="ntext"> {{ text.name }} </p>
+  <p id="inftiket"> {{ text.tiket }} </p>
+  <br><hr><br>
+</div>
+<div *ngIf="!finished" >
+    <div class="scroll-div loader"
+        infiniteScroll   
+        [infiniteScrollDistance]="2"   
+        [infiniteScrollUpDistance]="1.5"
+        [infiniteScrollThrottle]="2500"      
+        (scrolled)="onScroll()">     
+   </div> 
+   <div *ngIf="finished">
+  </div> 
+</div>
+ 

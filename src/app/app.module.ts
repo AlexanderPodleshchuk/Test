@@ -1,25 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http';
-import { AppComponent }   from './app.component';
-import { Component } from '@angular/core';
-import { ChangeTitleComponent } from './change-title/change-title.component';
-import { TitelService } from './titel.service';
- 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
+
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { AppRoutingModule } from './app-routing.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
-    AppComponent,
-    ChangeTitleComponent
+    AppComponent, 
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    InfiniteScrollModule,
+    RouterModule,
+    LoadingBarRouterModule,
+    AppRoutingModule
   ],
-  providers: [TitelService],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
+  exports: [InfiniteScrollModule]
 })
 export class AppModule { 
   
   
 }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
 
